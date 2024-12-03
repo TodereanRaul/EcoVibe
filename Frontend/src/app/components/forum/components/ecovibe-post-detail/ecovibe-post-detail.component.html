@@ -1,0 +1,18 @@
+<div class="post-detail">
+    <div *ngIf="post; else noPost">
+      <ecovibe-post-content [post]="post"></ecovibe-post-content>
+      
+      <hr>
+      
+      <ecovibe-comment-list [comments]="comments"></ecovibe-comment-list>
+      
+      <hr>
+      
+      <ecovibe-new-comment-form (commentCreated)="onCommentCreated($event)"></ecovibe-new-comment-form>
+    </div>
+  </div>
+  
+  <ng-template #noPost>
+    <p>Post not available</p>
+  </ng-template>
+  

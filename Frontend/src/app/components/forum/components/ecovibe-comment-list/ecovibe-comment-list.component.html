@@ -1,0 +1,18 @@
+<div class="comments-section">
+    <h2>Comments</h2>
+    
+    <!-- Display comments if there are any -->
+    <div *ngIf="comments?.length; else noComments">
+        <div *ngFor="let comment of comments" class="comment-card">
+            <div class="comment-meta">
+                <span class="comment-author">{{ comment.authorUsername }}</span> 
+                <span class="comment-date">{{ comment.date | date:'medium' }}</span>
+            </div>
+            <p class="comment-content">{{ comment.content }}</p>
+        </div>
+    </div>
+
+    <ng-template #noComments>
+        <p>No comments yet. Be the first to comment!</p>
+    </ng-template>
+</div>
