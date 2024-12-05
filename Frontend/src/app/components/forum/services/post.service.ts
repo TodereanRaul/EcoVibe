@@ -3,13 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Post, Comment } from '../../types';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PostService {
-  private postUrl = 'http://localhost:8080/api/v1/posts'; 
-  private commentUrl = 'http://localhost:8080/api/v1/comments'; 
+  private postUrl = 'http://localhost:8080/api/v1/posts';
+  private commentUrl = 'http://localhost:8080/api/v1/comments';
 
   constructor(private http: HttpClient) {}
 
@@ -23,11 +22,12 @@ export class PostService {
   }
 
   getComments(postId: string): Observable<Comment[]> {
-    return this.http.get<Comment[]>(`http://localhost:8080/api/v1/comments/post/${postId}`);
+    return this.http.get<Comment[]>(
+      `http://localhost:8080/api/v1/comments/post/${postId}`
+    );
   }
 
   createComment(commentToSave: Comment): Observable<Comment> {
     return this.http.post<Comment>(this.commentUrl, commentToSave);
   }
-  
 }

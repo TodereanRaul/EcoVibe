@@ -10,7 +10,7 @@ bootstrapApplication(AppComponent, {
   providers: [
     RouterModule,
     provideRouter(routes), // Register routes
-    provideHttpClient(),  // provideHttpClient here
+    provideHttpClient(), // provideHttpClient here
     CommonModule, // Import CommonModule for Angular directives like ngIf
   ],
 }).catch((err) => console.error(err));

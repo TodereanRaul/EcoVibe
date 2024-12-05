@@ -6,13 +6,15 @@ import { EcovibeWhatWeDoComponent } from './components/what-we-do/ecovibe-what-w
 import { EcovibeMediaComponent } from './components/media/ecovibe-media/ecovibe-media.component';
 import { ForumPageComponent } from './components/forum/forum-page/forum-page.component';
 import { EcovibePostDetailComponent } from './components/forum/components/ecovibe-post-detail/ecovibe-post-detail.component';
+import { DonateComponent } from './components/donate/donate.component';
 
 export const routes: Routes = [
-  { path: '', component: EcovibeHomeComponent }, 
+  { path: '', component: EcovibeHomeComponent },
   { path: 'about-us', component: EcovibeAboutUsPageComponent },
   { path: 'what-we-do', component: EcovibeWhatWeDoComponent },
   { path: 'media', component: EcovibeMediaComponent },
   { path: 'forum', component: ForumPageComponent },
-  { path: 'contact', component: EcovibeContactComponent }, 
+  { path: 'contact', component: EcovibeContactComponent },
   { path: 'post/:id', component: EcovibePostDetailComponent },
+  { path: 'donate', component: DonateComponent },
 ];

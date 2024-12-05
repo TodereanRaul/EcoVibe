@@ -5,9 +5,13 @@ import { EcovibeFooterSectionComponent } from './components/ecovibe-footer-secti
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarEcoVibeComponent, EcovibeFooterSectionComponent],
+  imports: [
+    RouterOutlet,
+    NavbarEcoVibeComponent,
+    EcovibeFooterSectionComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'EcoVibe';
