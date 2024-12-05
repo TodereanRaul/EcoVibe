@@ -30,6 +30,8 @@ public class ModelMapper {
     dto.setId(post.getId());
     dto.setAuthorUsername(post.getAuthor() != null ? post.getAuthor().getUsername() : null);
     dto.setTitle(post.getTitle());
+    dto.setSubTitle(post.getSubTitle());
+    dto.setImageUrl(post.getImageUrl());
     dto.setContent(post.getContent());
     dto.setDate(post.getDate());
     dto.setCommentIds(post.getCommentList() != null
@@ -46,6 +48,8 @@ public class ModelMapper {
     post.setContent(dto.getContent());
     post.setDate(dto.getDate());
     post.setTitle(dto.getTitle());
+    post.setSubTitle(dto.getSubTitle());
+    post.setImageUrl(dto.getImageUrl());
     if (dto.getAuthorUsername() != null) {
       Optional<User> user = userRepository.findByEmail(dto.getAuthorUsername());
       user.ifPresent(post::setAuthor);

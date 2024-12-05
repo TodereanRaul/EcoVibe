@@ -20,6 +20,8 @@ public class Post {
   private UUID id;
   private User author;
   private String title;
+  private String subTitle;
+  private String imageUrl;
   private String content;
   private String date;
   @OneToMany

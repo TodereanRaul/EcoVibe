@@ -13,6 +13,8 @@ public class PostDto {
   private UUID id;
   private String authorUsername;
   private String title;
+  private String subTitle;
+  private String imageUrl;
   private String content;
   private String date;
   private List<UUID> commentIds;
