@@ -1,7 +1,24 @@
-<div *ngFor="let post of posts" class="">
-  <a [routerLink]="['/post', post.id]" class="">
-    <h2>{{ post.title }}</h2>
-  </a>
-  <p><strong>Author:</strong> {{ post.authorUsername }}</p>
-  <p><strong>Date:</strong> {{ post.date }}</p>
+<div class="grid grid-cols-3 gap-12">
+  <div
+    *ngFor="let post of posts"
+    class="flex flex-col shadow-md rounded-md p-5 bg-[#F8FAFC]"
+  >
+    <!--bg-gradient-to-l from-[#BFD8AF] to-white-->
+    <a [routerLink]="['/post', post.id]" class="">
+      <div class="flex flex-col text-center">
+        <p
+          class="text-lg bg-gradient-to-r from-[#70C174] to-[#0B0706] bg-clip-text text-transparent mb-2 font-semibold"
+        >
+          {{ post.title }}
+        </p>
+        <p class="text-base text-[#1D2130] mb-5 font-medium">
+          {{ post.subTitle }}
+        </p>
+        <div class="flex flex-row text-sm justify-between">
+          <p>{{ post.authorUsername }}</p>
+          <p>{{ post.date }}</p>
+        </div>
+      </div>
+    </a>
+  </div>
 </div>
