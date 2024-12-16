@@ -1,13 +1,15 @@
-<div class="post-component border-2 border-blue-500" *ngIf="post">
-  <div class="post-header">
-    <h1>{{ post.title }}</h1>
-    <div class="post-meta">
-      <span>by {{ post.authorUsername }}</span> |
-      <span>{{ post.date | date : "medium" }}</span>
-    </div>
+<div class="container pt-24 px-24 mb-12" *ngIf="post">
+  <div class="flex flex-col text-center mb-12">
+    <span class="mb-4">{{ post.date | date }}</span>
+    <h1 class="text-5xl font-bold text-[#1D2130] mb-2">{{ post.title }}</h1>
   </div>
 
-  <div class="post-content border-2 border-blue-500">
-    <p>{{ post.content }}</p>
+  <div class="">
+    <h2 class="text-3xl font-bold text-[#1D2130] mb-4">
+      {{ post.subTitle }}
+    </h2>
+    <div *ngFor="let paragraph of paragraphs">
+      <p class="mb-2">{{ paragraph }}.</p>
+    </div>
   </div>
 </div>
