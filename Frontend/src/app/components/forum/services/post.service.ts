@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Post, Comment } from '../../types';
 
 @Injectable({
@@ -15,6 +15,12 @@ export class PostService {
   // Fetch all posts
   getAllPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.postUrl);
+  }
+
+  getAllPostsIds(): Observable<string[]> {
+    return this.http.get<Post[]>(this.postUrl).pipe(
+      map((posts: Post[]) => posts.map(post => post.id)) // Assuming each post has an 'id' field
+    );
   }
 
   getPost(postId: string): Observable<Post> {
