@@ -57,3 +57,14 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Run BE
+
+From Ubuntu terminal run the following command to run the BE:
+
+- go to EcoVibe/Backend/EcovibeUtils/
+- run the following command: `docker build -t ecovibe_postgres . && docker-compose up -d`
+
+From Intelij IDEA run the application `EcoVibeApplication`
+
+!(only once)! Import `EcoVibe.postman_collection.json` in Postman for testing the API endpoints.

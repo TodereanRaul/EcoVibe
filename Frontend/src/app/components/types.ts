@@ -1,9 +1,11 @@
 export interface Post {
-    id: string;
-    authorUsername: string; 
-    title: string;
-    content: string;
-    date: string;
+  id: string;
+  authorUsername: string;
+  title: string;
+  content: string;
+  date: string;
+  subTitle: string;
+  imageUrl: string;
 }
 
 export interface Comment {

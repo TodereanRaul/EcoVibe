@@ -22,9 +22,10 @@ public class Post {
   private String title;
   private String subTitle;
   private String imageUrl;
+  @Column(columnDefinition = "TEXT")
   private String content;
   private String date;
   @OneToMany
-  private List<Comment> commentList;
+  private List<Comment>commentList;
 
 }

@@ -17,6 +17,7 @@ public class Comment {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private UUID id;
   private User author;
+  @Column(columnDefinition="TEXT")
   private String content;
   private String date;
   @ManyToOne
